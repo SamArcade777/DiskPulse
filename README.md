@@ -14,7 +14,7 @@ Modern laptops often ditch the physical disk activity LED. For hardware geeks, p
 
 ## ⚙️ How It Works
 
-- A **Bash script** on your Linux system monitors disk I/O (via `/proc/diskstats` or `iostat`).
+- A **Bash script** on your Linux system monitors disk I/O (via `/sys/class/block/<device>/stat`).
 - It sends signals via **USB serial** to an **Arduino Uno**.
 - The Arduino toggles an LED based on disk read/write activity.
 
@@ -44,5 +44,5 @@ Wire an LED with a 220Ω resistor to **Pin 13** (or your preferred pin).
 ### 3. Run the Bash Monitor
 
 ```bash
-bash Diskpulse.sh
+sudo ./Diskpulse.sh
 ```
