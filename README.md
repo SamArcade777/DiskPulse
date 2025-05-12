@@ -44,4 +44,5 @@ Wire an LED with a 220Ω resistor to **Pin 13** (or your preferred pin).
 ### 3. Run the Bash Monitor
 
 ```bash
-bash disk_led.sh /dev/ttyACM0
+bash Diskpulse.sh
+```
